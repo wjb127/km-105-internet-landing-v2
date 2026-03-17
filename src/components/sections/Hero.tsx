@@ -21,13 +21,13 @@ export default function Hero() {
       {/* 그라데이션 오버레이 — 하단으로 갈수록 진해짐 */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/70 to-white/90" />
 
-      <div className="relative text-center pt-10 pb-8 px-4">
+      <div className="relative text-center pt-16 pb-14 px-4">
         {/* 이벤트 배지 */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" as const }}
-          className="inline-block bg-accent text-grey-900 text-xs font-bold px-4 py-1.5 rounded-full mb-4"
+          className="inline-block bg-accent text-grey-900 text-xs font-bold px-4 py-1.5 rounded-full mb-6"
         >
           선착순 이벤트 진행중
         </motion.div>
@@ -37,7 +37,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" as const }}
-          className="text-3xl font-black text-grey-900 mb-3 leading-tight"
+          className="text-3xl font-black text-grey-900 mb-4 leading-tight"
         >
           인터넷 가입하고
           <br />
@@ -49,7 +49,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" as const }}
-          className="text-grey-600 text-sm mb-6 leading-relaxed"
+          className="text-grey-600 text-sm mb-8 leading-relaxed"
         >
           SK · KT · LG 전 통신사 비교하고
           <br />
@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" as const }}
-          className="flex justify-center gap-2 mb-6"
+          className="flex justify-center gap-2 mb-8"
         >
           {["당일 설치", "현금 지급", "최저가 보장"].map((badge) => (
             <span
