@@ -1,6 +1,7 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import Products from "@/components/sections/Products";
+import TrustBadgeBar from "@/components/sections/TrustBadgeBar";
 import ConsultForm from "@/components/sections/ConsultForm";
 import Promises from "@/components/sections/Promises";
 import RecentList from "@/components/sections/RecentList";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Products />
+        <TrustBadgeBar />
         <ConsultForm />
         <Promises />
         <RecentList />
