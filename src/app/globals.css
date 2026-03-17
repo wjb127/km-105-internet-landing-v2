@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary: 오렌지 (당근 마켓 톤) */
+  --color-primary-50: #FFF7F0;
+  --color-primary-100: #FFEDD5;
+  --color-primary-200: #FED7AA;
+  --color-primary-300: #FDBA74;
+  --color-primary-400: #FB923C;
+  --color-primary-500: #FF6B35;
+  --color-primary-600: #E55A2B;
+  --color-primary-700: #C2410C;
+  --color-primary-800: #9A3412;
+  --color-primary-900: #7C2D12;
+
+  /* Grey Scale */
+  --color-grey-50: #F9FAFB;
+  --color-grey-100: #F3F4F6;
+  --color-grey-200: #E5E7EB;
+  --color-grey-300: #D1D5DB;
+  --color-grey-400: #9CA3AF;
+  --color-grey-500: #6B7280;
+  --color-grey-600: #4B5563;
+  --color-grey-700: #374151;
+  --color-grey-800: #1F2937;
+  --color-grey-900: #111827;
+
+  /* 카카오 옐로우 */
+  --color-kakao: #FEE500;
+
+  /* 통신사 색상 */
+  --color-sk: #E4002B;
+  --color-kt: #ED1C24;
+  --color-lg: #A50034;
+
+  /* 악센트 & 상태 */
+  --color-accent: #FFB800;
+  --color-success: #10B981;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+}
+
+body {
+  font-family: var(--font-noto), 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1A1A1A;
+  background-color: #FAFAFA;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: keep-all;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 카드 그림자 */
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* 플로팅 애니메이션 */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.floating-icon {
+  animation: float 3s ease-in-out infinite;
+}
