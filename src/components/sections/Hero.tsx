@@ -9,19 +9,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden">
-      {/* 배경 이미지 */}
-      <Image
-        src="/images/hero-bg.webp"
-        alt=""
-        fill
-        priority
-        className="object-cover"
-      />
-      {/* 오버레이 */}
-      <div className="absolute inset-0 bg-white/70" />
-
-      <div className="relative max-w-[560px] mx-auto text-center py-12 px-4">
+    <section className="bg-gradient-to-b from-primary-50 to-white pt-10 pb-8 px-4">
+      <div className="max-w-[560px] mx-auto text-center">
         {/* 이벤트 배지 */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -49,19 +38,35 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" as const }}
-          className="text-grey-500 text-sm mb-6 leading-relaxed"
+          className="text-grey-500 text-sm mb-5 leading-relaxed"
         >
           SK · KT · LG 전 통신사 비교하고
           <br />
           나에게 딱 맞는 요금제를 찾아보세요
         </motion.p>
 
+        {/* 이미지 카드 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" as const }}
+          className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 card-shadow"
+        >
+          <Image
+            src="/images/hero-bg.webp"
+            alt="밝고 따뜻한 거실에서 인터넷을 사용하는 모습"
+            fill
+            priority
+            className="object-cover"
+          />
+        </motion.div>
+
         {/* 혜택 배지 3개 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" as const }}
-          className="flex justify-center gap-2 mb-8"
+          className="flex justify-center gap-2 mb-6"
         >
           {["당일 설치", "현금 지급", "최저가 보장"].map((badge) => (
             <span
@@ -86,6 +91,5 @@ export default function Hero() {
         </motion.button>
       </div>
     </section>
-
   );
 }
