@@ -121,9 +121,9 @@ export default function ConsultForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="이름을 입력해주세요"
-              className="w-full border border-grey-200 rounded-lg px-4 py-3 text-sm
+              className="w-full border border-grey-300 rounded-lg px-4 py-3 text-sm
                 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500
-                placeholder:text-grey-300"
+                placeholder:text-grey-400"
             />
           </div>
 
@@ -137,10 +137,10 @@ export default function ConsultForm() {
                 type="text"
                 value={phone1}
                 readOnly
-                className="w-16 text-center border border-grey-200 rounded-lg px-2 py-3 text-sm
-                  bg-grey-50 text-grey-500"
+                className="w-16 text-center border border-grey-300 rounded-lg px-2 py-3 text-sm
+                  bg-grey-50 text-grey-600"
               />
-              <span className="text-grey-300">-</span>
+              <span className="text-grey-400 font-medium">-</span>
               <input
                 ref={phone2Ref}
                 type="tel"
@@ -149,11 +149,11 @@ export default function ConsultForm() {
                 onChange={(e) => handlePhone2Change(e.target.value)}
                 placeholder="0000"
                 maxLength={4}
-                className="flex-1 text-center border border-grey-200 rounded-lg px-2 py-3 text-sm
+                className="flex-1 text-center border border-grey-300 rounded-lg px-2 py-3 text-sm
                   focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500
-                  placeholder:text-grey-300"
+                  placeholder:text-grey-400"
               />
-              <span className="text-grey-300">-</span>
+              <span className="text-grey-400 font-medium">-</span>
               <input
                 ref={phone3Ref}
                 type="tel"
@@ -162,9 +162,9 @@ export default function ConsultForm() {
                 onChange={(e) => handlePhone3Change(e.target.value)}
                 placeholder="0000"
                 maxLength={4}
-                className="flex-1 text-center border border-grey-200 rounded-lg px-2 py-3 text-sm
+                className="flex-1 text-center border border-grey-300 rounded-lg px-2 py-3 text-sm
                   focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500
-                  placeholder:text-grey-300"
+                  placeholder:text-grey-400"
               />
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function ConsultForm() {
                     "flex-1 py-2.5 rounded-lg text-sm font-medium border transition-all",
                     carrier === c
                       ? "bg-primary-500 text-white border-primary-500"
-                      : "bg-white text-grey-600 border-grey-200 hover:border-primary-300"
+                      : "bg-white text-grey-600 border-grey-300 hover:border-primary-400"
                   )}
                 >
                   {c}
@@ -208,7 +208,7 @@ export default function ConsultForm() {
                     "w-full py-2.5 rounded-lg text-sm font-medium border transition-all text-left px-4",
                     product === p
                       ? "bg-primary-500 text-white border-primary-500"
-                      : "bg-white text-grey-600 border-grey-200 hover:border-primary-300"
+                      : "bg-white text-grey-600 border-grey-300 hover:border-primary-400"
                   )}
                 >
                   {p}
