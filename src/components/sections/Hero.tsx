@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -8,8 +9,19 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-primary-50 to-white py-12 px-4">
-      <div className="max-w-[560px] mx-auto text-center">
+    <section className="relative overflow-hidden">
+      {/* 배경 이미지 */}
+      <Image
+        src="/images/hero-bg.webp"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+      />
+      {/* 오버레이 */}
+      <div className="absolute inset-0 bg-white/70" />
+
+      <div className="relative max-w-[560px] mx-auto text-center py-12 px-4">
         {/* 이벤트 배지 */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -74,5 +86,6 @@ export default function Hero() {
         </motion.button>
       </div>
     </section>
+
   );
 }
